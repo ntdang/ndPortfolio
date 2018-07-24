@@ -1,0 +1,311 @@
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: 'Merriweather', serif;
+	height: 100%;
+	width: 100%;
+}
+
+body,
+p,
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 0;
+}
+
+p,
+h1,
+h2 {
+	line-height: 1.3;
+	width: 100%;
+}
+
+body {
+	font-size: 18px;
+	font-weight: 300;
+}
+
+p {
+	font-size: 22px;
+	color: white;
+}
+
+.p--copy {
+	padding: 3px 0 22px 0;
+}
+
+.p--credits {
+	font-size: .8em;
+	font-weight: 700;
+}
+
+h1 {
+	font-family: 'Nanum Myeongjo', serif;
+	color: lightcoral;
+	font-size: 3em;
+	font-weight: 700;
+	margin-top: 175px;
+	text-align: center;
+}
+
+h2, h2#tech-skills {
+  font-family: 'Merriweather', serif;
+	font-size: 2.5em;
+	font-weight: 700;
+	color: white;
+	padding: 15px;
+	text-align: center;
+}
+
+#about {
+	font-family: 'Nanum Myeongjo', serif;
+	color: lightcoral;
+}
+
+#skills-list {
+	color: lightgray;
+	text-align: center;
+}
+
+a {
+	color: #fff;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.a--no-weight {
+	font-weight: 300;
+}
+
+section {
+	-webkit-align-items: center;
+	align-items: center;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+section .content {
+	/* background: rgba(0, 0, 0, .4); */
+	border-radius: 3px;
+	color: #fff;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px 20px;
+	text-align: center;
+	margin-top: 45px;
+}
+
+#me {
+	border-radius: 20%;
+	size: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: 200px;
+	margin-top: 40px;
+}
+
+.social {
+	text-align: center;
+margin: 30px;
+}
+
+.gallery-wrapper {
+	width: 100%;
+	margin: 20px;
+}
+
+.parallax__container {
+	clip: rect(0, auto, auto, 0);
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -10;
+}
+
+.parallax__container .parallax {
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.parallax__container .parallax__bg {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container {
+	padding: 15px;
+}
+
+.container__huge {
+	height: 150vh;
+}
+
+.container__big {
+	height: 97vh;
+}
+
+.container__small {
+	height: 40vh;
+}
+
+.container__random {
+	height: 452px;
+}
+
+.gallery {
+	display: grid;
+	grid-gap: 3rem;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(auto-fill, 400px);
+	margin-right: 55px;
+}
+
+div.item {
+	margin: 10px;
+	border: 1px solid #ccc;
+	float: left;
+	width: 430px;
+	background: lightgray;
+}
+
+div.item:hover {
+	border: 2px solid lightseagreen;
+}
+
+div.item img {
+	width: 100%;
+	height: auto;
+}
+
+div.name {
+	padding: 10px 0px 0px 0px;;
+	text-align: center;
+	font-weight: bold;
+	color: black;
+	font-size: 2.5rem;
+}
+
+div.skills, div.desc {
+	margin: 7px;
+	text-align: center;
+	color: black;
+}
+
+.arrow-wrap {
+  position:absolute;
+  z-index:1;
+  left:50%;
+  top:-5em;
+  margin-left:-5em;
+  background:#111;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+  border-radius:50%;
+  font-size:0.5em;
+  display:block;
+  box-shadow:0px 0px 5px 0px #333;
+}
+
+.arrow {
+  float:left;
+  position:relative;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #ffffff transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+.arrow:after {
+  content:'';
+  position:absolute;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 3em 3em 0 3em;
+border-color: #111 transparent transparent transparent;
+  -webkit-transform:rotate(360deg)
+}
+
+
+.hint {
+  position:absolute;
+  top:0.6em;
+  width:100%;
+  left:0;
+  font-size:2em;
+  font-style:italic;
+  text-align:center;
+  color:#fff;
+  opacity:0;
+}
+
+
+.arrow-wrap:hover .hint {
+  opacity:1;
+}
+
+
+  @-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+  }
+  
+  .arrow-wrap .arrow {
+    -webkit-animation: arrows 2.8s 0.4s;
+    -webkit-animation-delay: 3s;
+  }
+
+/* ways of implementing parallax bg by class/id */
+
+.bg1 {
+	background-image: url("../img/bg1.jpg");
+}
+
+#bg3 {
+	background-image: url("../img/bg3.jpg");
+}
+
+/* webkit clip fix */
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+	.parallax__container {
+		clip: auto;
+		-webkit-mask-image: -webkit-linear-gradient(top, #fff 0%, #fff 100%);
+	}
+}
